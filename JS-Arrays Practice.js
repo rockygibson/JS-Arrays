@@ -122,7 +122,10 @@ finder();
 var str = 'this is my sentence';
 //Write a function called reverse that takes is given str as it's only argument and returns that string after it's been reversed
 
-  //Code Here
+  var reverse = function(string) {
+    return string.split('').reverse().join('');
+  };
+  reverse(str);
 
 
 //Next Problem
@@ -139,7 +142,21 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
   myGroceryList then return the new, updated grocery list.
 */
 
-  //Code Here
+  var removeItem = function(myGroceryList, item) {
+    for (var i = 0; i < myGroceryList.length; i++) {
+      if (myGroceryList[i] === item) {
+        myGroceryList.splice(i, 1);
+        return myGroceryList;
+      }
+    }
+  };
+  removeItem('chips');
+
+  var addItem = function(myGroceryList, item) {
+    myGroceryList.push(addeditem);
+    return myGroceryList;
+  };
+  addItem('jerky');
 
 //removeItem('chips') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 //addItem('Jerky') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs', 'Jerky'];
