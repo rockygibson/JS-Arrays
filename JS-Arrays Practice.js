@@ -185,7 +185,13 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 //Write a function called addTen that is given 'numbers' as it's only argument and returns a new
 //array after adding ten to each item in numbers. *Verify your answer is correct. --> [15, 19, 26, 29, 35, 44, 58]
 
-  //Code Here
+  var addTen = function(array){
+    for (var i = 0; i < array.length; i++) {
+      array[i] = parseInt(array[i]) + 10;
+    }
+    return array;
+  };
+  addTen(numbers);
 
 
 
@@ -206,14 +212,16 @@ for(var i = 0; i < num2; i++){
 //Above is some code that adds a random number to both arr1 and arr2.
 //Write a function that is given arr1 and arr2 as its only arguments. Return the array which is longest.
 
-  var longestArray = function(arr1, arr2) {
-    if(arr1.length > arr2.length){
-      return arr1;
+  var longestArray = function(array1, array2){
+    if (array1.length > array2.length) {
+      return array1;
+    } else if (array1.length === array2.length) {
+      return "The arrays lengths are the same";
+    } else {
+      return array2;
     }
-    else {
-      return arr2;
-    }
-  }
+  };
+  longestArray(arr1, arr2);
 
 
 /*As a continuation of the previous problem, write another function called 'both'.
@@ -221,4 +229,9 @@ for(var i = 0; i < num2; i++){
   'both' should return a new array full of numbers that are found in both arr1 and arr2.
 */
 
-  //Code Here
+  var both = function (arr1, arr2) {
+    var conArray = arr1.concat(arr2);
+    return conArray;
+  };
+both(arr1, arr2);
+
